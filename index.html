@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbie Movie Website</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-png"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span>Margot Robbie</span>
+        <span>Ryan Gosling</span>
+      </header>
+
+      <section class="phrase">
+        <p>Ela é tudo.</p>
+        <p>Ele é só o Ken.</p>
+      </section>
+
+      <section class="info">
+        <div class="cine">
+          <p>20 de Julho</p>
+          <p>Somente nos cinemas</p>
+        </div>
+        <div class="social">
+          <a href="#"><i class="ph-duotone ph-facebook-logo"></i></a>
+          <a href="#"><i class="ph-duotone ph-instagram-logo"></i></a>
+          <a href="#"><i class="ph-duotone ph-twitter-logo"></i></a>
+          <a href="#"><i class="ph-duotone ph-tiktok-logo"></i></a>
+        </div>
+      </section>
+
+      <section class="buttons">
+        <a href="http://google.com/search?q=barbie" target="_blank">
+          <button>Compre seu ingresso</button>
+        </a>
+        <button id="openModal">Assista ao Trailer</button>
+      </section>
+
+      <div id="modalContainer">
+        <iframe
+          id="ytIframe"
+          width="1280"
+          height="720"
+          src="https://www.youtube.com/embed/Ujs1Ud7k49M?controls=0"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <footer>
+        <i class="ph-duotone ph-speaker-high" onclick="playAudio()"></i>
+        <i class="ph-duotone ph-speaker-slash" onclick="stopAudio()"></i>
+
+        <audio id="audio" loop>
+          <source src="./assets/audio/barbie.mp3" type="audio/mpeg" />
+        </audio>
+
+        <img src="./assets/images/WarnerLogo.svg" alt="Warner Logo" />
+        <img
+          src="./assets/images/scroll.gif"
+          alt="Scroll"
+          class="scroll"
+          width="40px"
+          height="40px"
+        />
+      </footer>
+    </div>
+  </body>
+</html>
